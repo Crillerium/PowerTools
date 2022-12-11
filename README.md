@@ -9,10 +9,10 @@ File Guard 可以在其所在目录下生成保密文件夹,
 且支持双空间双密码,互不干扰，工作生活两不误(doge),  
 可根据密码在对应空间中启动ftp服务,防止上层目录文件泄露  
 ### 使用
-1. 下载代码并cd至Guard文件夹;  
+1. 下载代码并cd至FileGuard文件夹;  
 2. 安装依赖:
 ```
-pip install pyftplib
+pip install pyftpdlib
 ```  
 3. 运行命令:
 ```
