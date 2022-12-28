@@ -24,7 +24,7 @@ Press Ctrl + C to exit
     except:
         os.system('pip install pyftpdlib');
     authorizer = DummyAuthorizer();
-    authorizer.add_user('pi','pi',path,perm='elradfmwM');
+    authorizer.add_user('ftpd','ftpd',path,perm='elradfmwM');
     handler = FTPHandler;
     handler.authorizer = authorizer;
     
