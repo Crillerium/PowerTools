@@ -9,10 +9,10 @@ if __name__  == '__main__':
     ip = s.getsockname()[0];
     path = os.getcwd();
     print("""
-\033[1;32;40mThe FTP Username: ftpd
-The FTP Password: ftpd
-The FTP Address: """+ip+""":8888
-The FTP Directory: """+path+"""
+\033[1;32mFTP 用户名: ftpd
+FTP 密码: ftpd
+FTP 地址: """+ip+""":8888
+FTP 目录: """+path+"""
 
 Press Ctrl + C to exit
 \033[0m
@@ -22,7 +22,7 @@ Press Ctrl + C to exit
         from pyftpdlib.servers import FTPServer;
         from pyftpdlib.authorizers import DummyAuthorizer;
     except:
-        os.system('pip install pyftpdlib');
+        print("\033[1;32m请先安装pyftpdlib库\033[0m")
     authorizer = DummyAuthorizer();
     authorizer.add_user('ftpd','ftpd',path,perm='elradfmwM');
     handler = FTPHandler;
