@@ -7,6 +7,7 @@ def menu(path):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM);
     s.connect(('8.8.8.8', 80));
     ip = s.getsockname()[0];
+    s.close()
     print("""
 \033[1;32;40mGlad to see you again, I will run in the form of FTP server.
 The FTP Username: guard
