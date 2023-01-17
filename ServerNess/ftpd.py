@@ -3,6 +3,7 @@
 import os;
 import base64;
 import socket;
+import sys;
 
 if __name__  == '__main__':
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM);
@@ -25,6 +26,7 @@ Press Ctrl + C to exit
         from pyftpdlib.authorizers import DummyAuthorizer;
     except:
         print("\033[1;32m请先安装pyftpdlib库\033[0m")
+        sys.exit()
     authorizer = DummyAuthorizer();
     authorizer.add_user('ftpd','ftpd',path,perm='elradfmwM');
     handler = FTPHandler;
