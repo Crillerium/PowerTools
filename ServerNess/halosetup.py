@@ -23,14 +23,17 @@ if getpass.getuser() == 'root':
         print(color('第四步:安装Halo2博客前准备'))
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM);
         s.connect(('8.8.8.8', 80));
-        ip = s.getsockname()[0];
+        host = s.getsockname()[0];
         s.close()
+        domain = input('请输入访问域名(今后不可更改，留空则选择'+ip+'): ')
+        if domain == '':
+            domain = ip
         port = input('请输入Halo将要占用的端口: ')
         username = input('请输入Halo超级管理员账号(不可大写): ')
         password = input('请输入'+username+'的密码: ')
         print('准备就绪,你的Halo博客访问地址将为http://'+ip+':'+port)
         print(color('第五步:安装Halo2博客程序'))
-        command = 'docker run -it -d --name halo -p '+port+':8090 -v ~/.halo2:/root/.halo2 halohub/halo:2.4.0 --halo.external-url=http://'+ip+':'+port+'/ --halo.security.initializer.superadminusername='+username+' --halo.security.initializer.superadminpassword='+password
+        command = 'docker run -it -d --name halo -p '+port+':8090 -v ~/.halo2:/root/.halo2 halohub/halo:2.4.0 --halo.external-url=https://'+domain+':'+port+'/ --halo.security.initializer.superadminusername='+username+' --halo.security.initializer.superadminpassword='+password
         os.system(command)
         print(color('安装完成,脚本已自动退出'))
         sys.exit()
