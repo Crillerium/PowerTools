@@ -25,9 +25,9 @@ if getpass.getuser() == 'root':
         s.connect(('8.8.8.8', 80));
         host = s.getsockname()[0];
         s.close()
-        domain = input('请输入访问域名(今后不可更改，留空则选择'+ip+'): ')
+        domain = input('请输入访问域名(今后不可更改，留空则选择'+host+'): ')
         if domain == '':
-            domain = ip
+            domain = host
         port = input('请输入Halo将要占用的端口: ')
         username = input('请输入Halo超级管理员账号(不可大写): ')
         password = input('请输入'+username+'的密码: ')
