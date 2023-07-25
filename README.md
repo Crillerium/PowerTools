@@ -25,10 +25,13 @@ python guard.py
 ## Server.py 静态WEB服务器
 ### 介绍
 Server.py 是基于官方开源的http.server进行修改的上位脚本
-### 功能
-在运行
+### 使用
+直接运行
 ```
 python3 server.py 
 ```
 (参数配置与http.server相同)
+### 特性
+简化原版http.server输出, 自动按照状态码为输出信息标记颜色，资源问题一眼洞察！
+## 其他项目
 
