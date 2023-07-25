@@ -34,7 +34,7 @@ python3 server.py
 ### 特性
 简化原版http.server输出, 自动按照状态码为输出信息标记颜色，资源问题一眼洞察！
 ## 其他项目
-`ServerNess/ftpd.py` 在本机运行一个FTP服务端的脚本
-`ServerNess/openport.py` 一键放行使用端口的脚本
-`ServerNess/halosetup.py` 可以安装 Halo 博客的一键脚本
-`GeneEncrypt/encrypt.py` 按照 “嘌呤嘧啶” 对文本进行加解密的脚本
+`ServerNess/ftpd.py` 在本机运行一个FTP服务端的脚本  
+`ServerNess/openport.py` 一键放行使用端口的脚本  
+`ServerNess/halosetup.py` 可以安装 Halo 博客的一键脚本  
+`GeneEncrypt/encrypt.py` 按照 “嘌呤嘧啶” 对文本进行加解密的脚本  
