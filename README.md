@@ -38,3 +38,5 @@ python3 server.py
 `ServerNess/openport.py` 一键放行使用端口的脚本  
 `ServerNess/halosetup.py` 可以安装 Halo 博客的一键脚本  
 `GeneEncrypt/encrypt.py` 按照 “嘌呤嘧啶” 对文本进行加解密的脚本  
+`OhMyData/easyjson.db` 更加简单的基于json的数据库
+ 
