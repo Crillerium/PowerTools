@@ -14,6 +14,6 @@ if getpass.getuser() == 'root':
     os.system('iptables -F 2>/dev/null')
     os.system('iptables -X 2>/dev/null')
     os.system('netfilter-persistent save 2>/dev/null')
-    print("\033[1;32m提示:已开放系统所有端口\033[0m")
+    print("提示:已开放系统所有端口")
 else:
-    print("\033[1;32m提示:请以root权限运行\033[0m")
+    print("提示:请以root权限运行")
