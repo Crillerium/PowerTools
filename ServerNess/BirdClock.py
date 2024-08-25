@@ -1,7 +1,7 @@
 import time
 import datetime
-import fire
 import sys
+import fire
 import os
 
 class ScheduleTask:
@@ -23,13 +23,13 @@ class ScheduleTask:
             next_run += datetime.timedelta(days=1)
 
         # 计算等待时间
-        wait_time = (next_run - now).total_seconds()
+        to_wait_time = (next_run - now).total_seconds()
 
         # 打印等待时间
-        print(f"任务将在 {wait_time} 秒后执行。")
+        print(f"任务将在 {to_wait_time} 秒后执行。")
 
         # 等待直到执行时间
-        time.sleep(wait_time)
+        time.sleep(to_wait_time)
 
         # 执行任务
         print(f"执行任务: {self.task}")
