@@ -1,4 +1,9 @@
-from PIL import Image
+try:
+    from PIL import Image
+except ImportError:
+    print("PIL模块未安装，请先安装Pillow库。")
+    sys.exit(1)
+
 import sys
 
 

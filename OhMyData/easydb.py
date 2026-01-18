@@ -3,7 +3,7 @@ import os
 
 class EasyDB:
     path = ''
-    mode = 'buffer' # or 'file'
+    mode = 'buffer'
     data = []
     status = False
     def __init__(self,path=''):
